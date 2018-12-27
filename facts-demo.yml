@@ -1,5 +1,5 @@
 ---
-- name: demo of show version command
+- name: demo of show version command and demo and demo
   hosts: "ios"
   gather_facts: no
   connection: network_cli
