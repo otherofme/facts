@@ -1,0 +1,38 @@
+---
+- name: demo of show version command
+  hosts: "ios"
+  gather_facts: no
+  connection: network_cli
+
+  tasks:
+    ###
+    # Collect data
+    #
+    - name: Gather facts (ops)
+      ios_facts:
+        gather_subset: all
+      when: ansible_network_os == 'ios'
+
+    ###
+    # Demonstrate variables
+    #
+    - name: Display some facts
+      debug:
+        msg:
+          - "Hostname: {{ ansible_net_hostname }}"
+          - "Version: {{ ansible_net_version }}"
+          - "Model: {{ ansible_net_model }}"
+          - "Serial: {{ ansible_net_serialnum }}"
+
+    - name: Write facts to disk using a template
+      copy:
+        content: |
+          #jinja2: lstrip_blocks: True
+
+          Hostname,Version,Model,Serial
+          {% for host in groups['ios'] %}
+          {{ hostvars[host].ansible_net_hostname }},{{ hostvars[host].ansible_net_version }},{{ hostvars[host].ansible_net_model }},{{ hostvars[host].ansible_net_serialnum }}
+          {% endfor %}
+
+        dest: switch-facts.output
+      run_once: yes

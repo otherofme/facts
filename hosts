@@ -1,0 +1,20 @@
+# 1. Uses variables directly in inventory file (username / password)
+# 2. Uses IP address for host
+
+[ios:children]
+routers
+switches
+
+[routers]
+10.250.32.12.xip.io
+10.250.32.13.xip.io
+
+[switches]
+#10.250.75.1.xip.io
+
+[ios:vars]
+ansible_connection=network_cli
+ansible_network_os=ios
+ansible_user=cisco
+ansible_password=cisco
+connection_retry_timeout=2
