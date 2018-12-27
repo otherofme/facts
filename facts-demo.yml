@@ -1,5 +1,5 @@
 ---
-- name: demo of show version command and demo and demo
+- name: Gathering information about network device
   hosts: "ios"
   gather_facts: no
   connection: network_cli
@@ -24,7 +24,7 @@
           - "Model: {{ ansible_net_model }}"
           - "Serial: {{ ansible_net_serialnum }}"
 
-    - name: Write facts to disk using a template, temmplate
+    - name: Write facts to disk using a template
       copy:
         content: |
           #jinja2: lstrip_blocks: True
