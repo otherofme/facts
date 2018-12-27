@@ -24,7 +24,7 @@
           - "Model: {{ ansible_net_model }}"
           - "Serial: {{ ansible_net_serialnum }}"
 
-    - name: Write facts to disk using a template
+    - name: Write facts to disk using a template, temmplate
       copy:
         content: |
           #jinja2: lstrip_blocks: True
