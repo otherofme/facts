@@ -1,6 +1,4 @@
 # How To Factory Reset EdgeRouter X
-#### [Made by David Godibadze with Scribe](https://scribehow.com/shared/How_To_Factory_Reset_EdgeRouter_X__TOssjGj8RDGaMStaoStqQg)
-
 
 1\. Navigate to [https://192.168.1.1/](https://10.0.12.1/) or what ever IP does you EdgeRouter X have.
 
@@ -38,6 +36,5 @@
 8\. Click "Yes, I'm sure"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-04-22/10ff3c44-d003-4806-81d8-a8c308f9aab6/ascreenshot.jpeg?tl_px=235,99&br_px=2988,1638&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,380)
-#### [Made with Scribe](https://scribehow.com/shared/How_To_Factory_Reset_EdgeRouter_X__TOssjGj8RDGaMStaoStqQg)
 
 
